@@ -13,11 +13,6 @@ local trojan = {
 	local_port = tonumber(local_port),
 	remote_addr = server.server,
 	remote_port = tonumber(server.server_port),
-	udp_timeout = 60,
-	-- 传入连接
-	password = {server.password},
-	-- 传出连接
-	ssl = {
 		verify = (server.insecure == "0") and true or false,
 		verify_hostname = (server.tls == "1") and true or false,
 		cert = "",
